@@ -18,21 +18,21 @@ _prompt_eriner_main() {
 # new segment.
 _prompt_eriner_segment() {
   print -n "%K{${1}}"
-  if [[ -n ${BG_COLOR} ]] print -n "%F{${BG_COLOR}}"
+  if [[ -n ${BG_COLOR} ]] print -n "%F{${BG_COLOR}}"
   print -n "${2}"
   BG_COLOR=${1}
 }
 
 _prompt_eriner_standout_segment() {
   print -n "%S%F{${1}}"
-  if [[ -n ${BG_COLOR} ]] print -n "%K{${BG_COLOR}}%k"
+  if [[ -n ${BG_COLOR} ]] print -n "%K{${BG_COLOR}}%k"
   print -n "${2}%s"
   BG_COLOR=${1}
 }
 
 # End the prompt, closing last segment.
 _prompt_eriner_end() {
-  print -n "%k%F{${BG_COLOR}}%f "
+  print -n "%k%F{${BG_COLOR}}%f "
 }
 
 ### Prompt components
